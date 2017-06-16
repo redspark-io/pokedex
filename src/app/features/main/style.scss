@@ -1,0 +1,27 @@
+.main {
+  display: table;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  .logo-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $redsparkRed;
+    height: $logobarHeight;
+    width: 100%;
+    background-image: url('/assets/img/logo.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 50px;
+  }
+
+  .main-container {
+    display: table-cell;
+    vertical-align: middle;
+    padding-top: $logobarHeight;
+  }
+}
