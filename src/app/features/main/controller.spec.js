@@ -38,13 +38,13 @@ describe('mainController', function () {
   it('should set regionDetail when getRegionDetail get invoked',
   angular.mock.inject(function (
     $controller, $httpBackend, $state, regionService, generationService,generationAddIdTransformResponse,
-    REGION_MOCK, GENERATION_MOCK
+    REGION_MOCK, GENERATION_MOCK, API_BASE_URL
   ) {
 
     // Setup
     var mainController = $controller('mainController', controllerInjections);
-    $httpBackend.expect('GET', 'http://pokeapi.co/api/v2/region/kanto').respond(200, angular.copy(REGION_MOCK));
-    $httpBackend.expect('GET', 'http://pokeapi.co/api/v2/generation/generation-i').respond(200,
+    $httpBackend.expect('GET', API_BASE_URL + 'region/kanto').respond(200, angular.copy(REGION_MOCK));
+    $httpBackend.expect('GET', API_BASE_URL + 'generation/generation-i').respond(200,
       JSON.stringify(angular.copy(GENERATION_MOCK)) // stringified for the transform response
     );
 
