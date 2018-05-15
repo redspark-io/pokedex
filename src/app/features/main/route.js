@@ -11,7 +11,7 @@
   function mainRoutes($stateProvider) {
     $stateProvider
       .state('main', {
-        url: '/',
+        url: '/main',
         params: {
           search: {}
         },
